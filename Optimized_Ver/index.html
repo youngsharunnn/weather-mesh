@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmosphere — Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <h1 class="app-title">Atmosphere</h1>
+    <p class="app-sub">Real-time weather intelligence</p>
+    <form class="search-form" id="sForm">
+      <input
+        type="text"
+        class="city-input"
+        id="cInput"
+        placeholder="Enter a city…"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+    <p class="error-msg" id="errMsg" role="alert"></p>
+  </header>
+
+  <main id="dashboard">
+    <section class="loc-hero" id="locHero" aria-live="polite">
+      <h2 class="loc-name"    id="locName"></h2>
+      <p  class="loc-country" id="locCountry"></p>
+      <time class="loc-clock" id="locClock"></time>
+    </section>
+    <div class="grid" id="cardGrid"></div>
+  </main>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
